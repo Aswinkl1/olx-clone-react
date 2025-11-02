@@ -1,16 +1,75 @@
-# React + Vite
+# React OLX Clone (Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a lightweight clone of the OLX classifieds website, built as a learning project. It mimics the basic functionality of OLX, allowing users to view and post advertisements.
 
-Currently, two official plugins are available:
+This application is built with React and bootstrapped using [Vite](https://vitejs.dev/) for a fast and modern development experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Browse Ads:** View all available products on the homepage.
+- **View Details:** Click on any ad to see its detailed view (this feature is in progress).
+- **User Authentication:** Full user flow including Sign Up and Log In using Firebase Authentication.
+- **Post New Ads:** Logged-in users can post new advertisements with product details and an image.
+- **Protected Routes:** Certain pages (like 'Create Post') are protected and only accessible to logged-in users.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** [React](https://reactjs.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Routing:** [React Router v6](https://reactrouter.com/)
+- **Backend & DB:** [Firebase](https://firebase.google.com/) (used for Authentication, Firestore Database, and Storage)
+- **State Management:** [React Context API](https://reactjs.org/docs/context.html) (for managing user authentication state)
+- **Styling:** CSS3 (or Tailwind CSS - _you can edit this part_)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) (v16 or higher) and `npm` installed on your machine.
+
+### Installation
+
+1.  **Clone the repository**
+
+    ```sh
+    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    ```
+
+2.  **Navigate to the project directory**
+
+    ```sh
+    cd your-repo-name
+    ```
+
+3.  **Install NPM packages**
+
+    ```sh
+    npm install
+    ```
+
+4.  **Set up Environment Variables**
+
+    This project requires Firebase API keys to run.
+
+    - Create a new file named `.env` in the root of your project.
+    - Add your Firebase project configuration keys. **(Remember, Vite requires all environment variables to be prefixed with `VITE_`)**
+
+    Your `.env` file should look like this:
+
+    ```env
+    VITE_API_KEY=your_api_key
+    VITE_AUTH_DOMAIN=your_auth_domain
+    VITE_PROJECT_ID=your_project_id
+    VITE_STORAGE_BUCKET=your_storage_bucket
+    VITE_MESSAGING_SENDER_ID=your_sender_id
+    VITE_APP_ID=your_app_id
+    ```
+
+5.  **Run the Development Server**
+    ```sh
+    npm run dev
+    ```
+
+The app will be running on `http://localhost:5173` (or the next available port).
